@@ -2,4 +2,152 @@
 	padding: 0;
 	margin: 0;
 }
+body{
+	padding-top: 50px;
+}
+.top-nav{
+	display: flex;
+	background: #000;
+	min-height: 50px;
+	overflow: hidden;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.top-nav a{
+	text-decoration: none;
+	color: #fff;
+	transition: .5s;
+}
+.top-nav a:hover{
+	color: #047DBF;
+	border-bottom: 3px solid #047DBF;
+}
+.brand{
+	font-size: 30px;
+	margin: 0px 15px;
+	border-bottom: 3px solid black;
+	overflow: auto;
+}
+.top-nav-list {
+	display: flex;
+	list-style: none;
+	margin-left: auto;
 
+}
+.top-nav-list li{
+	margin: 0px 10px;
+}
+.top-nav-list a{
+	padding: 10px;
+}
+.top-nav-list a:hover{
+	background-color: #CDCDCD;
+}
+.fullscreen-bg {
+/*vh and vw stand for viewport height and viewport width*/
+	height: calc(100vh - 50px);
+	width:  100%;
+	/*background: red;*/
+	background-image: url(../images/coffee-large.jpeg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: green;
+	/*transition: background-image .5s;*/
+}
+
+/*.fullscreen-bg:hover{
+	border-radius: 50%;
+	transition: .5s;
+}*/
+
+.fullscreen-bg h1{
+	/*color: green;*/
+	padding: 15px;
+	/*text-align: center;*/
+	text-shadow: 3px 3px #00ffff;
+}
+
+.flex-row{
+	display: flex;
+	background: green;
+	/*overflow: hidden;*/
+	
+
+
+}
+.col-4-2-1{
+	width: 23%;
+	margin: 1%;
+	padding: 10px;
+	border-style: ridge;
+	background: red;
+	/*overflow: auto;*/
+
+
+
+}
+.col-4-2-1 img{
+	width: 100%;
+	height: 200px;
+	border-radius: 50%;
+}
+.col-4-2-1 img:hover{
+	border-radius: 30%;
+	transition: .5s;
+}
+.col-4-2-1 h2{
+	/*text-align: center;*/
+	padding: 2px;
+	display: flex;
+	justify-content: center;
+}
+#howto{
+	padding: 3px;
+	display: flex;
+	justify-content: center;
+	background: green;
+}
+/*#about{
+	color: purple;
+}*/
+/*@media is for media queries below media queries change things when the screen is below a certain size*/
+@media (max-width: 1200px){
+	.fullscreen-bg {
+		background-image: url(../images/coffee-medium.jpg);
+	}	
+	.flex-row{
+		flex-wrap: wrap;
+
+	}
+	.col-4-2-1{
+		width: 48%;
+		
+	}
+}
+@media(max-width: 600px){
+	.top-nav{
+		display: block;
+		text-align: center;
+	}
+	
+	.top-nav-list{
+		display: block;
+		text-align: center;
+	}.
+	.fullscreen-bg {
+		background-image: url(../images/latte.jpeg);
+	}
+	.flex-row{
+		flex-wrap: wrap;
+	}
+	.col-4-2-1{
+		width: 98%;
+		
+	}
+}
