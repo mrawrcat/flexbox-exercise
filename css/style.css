@@ -4,9 +4,11 @@
 }
 body{
 	padding-top: 50px;
+	width: 100%
+	overflow-x: hidden;
 }
 .top-nav{
-	display: flex;
+	display: inline-block;
 	background: #000;
 	min-height: 50px;
 	overflow: hidden;
@@ -15,6 +17,8 @@ body{
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 4;
+	 box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.46);
 }
 .top-nav a{
 	text-decoration: none;
@@ -37,14 +41,18 @@ body{
 	margin-left: auto;
 
 }
+.top-nav-list ul li a{
+	display: flex;
+	justify-content: center;
+}
 .top-nav-list li{
 	margin: 0px 10px;
 }
 .top-nav-list a{
-	padding: 10px;
+	/*padding: 10px;*/
 }
 .top-nav-list a:hover{
-	background-color: #CDCDCD;
+	/*background-color: #CDCDCD;*/
 }
 .fullscreen-bg {
 /*vh and vw stand for viewport height and viewport width*/
@@ -72,14 +80,24 @@ body{
 	/*text-align: center;*/
 	text-shadow: 3px 3px #00ffff;
 }
-
+.howtocoffee {
+	display: flex;
+	background: blue;
+}
 .flex-row{
 	display: flex;
 	background: green;
+	width: 100%;
 	/*overflow: hidden;*/
 	
 
 
+}
+
+.flex-row-2 {
+
+	display: flex;
+	background: green;
 }
 .col-4-2-1{
 	width: 23%;
@@ -116,6 +134,115 @@ body{
 /*#about{
 	color: purple;
 }*/
+
+#testgo{
+	display: flex;
+	justify-content: center;
+	background: green;
+	/*margin: 5px;*/
+	padding: 3px;
+}
+#re-three{
+	display: flex;
+	justify-content: center;
+	background: green;
+	/*margin: 5px;*/
+	padding: 3px;
+}
+/*========== Testing for dropdown menu ================*/
+#main-nav input,
+#main-nav label {
+  display: none;
+}
+@media (max-width: 1950px) {
+  #main-nav p {
+    width: 70%;
+  }
+  #main-nav ul {
+    position: absolute;
+    height: 0px;
+    right: -100%;
+    top: 0px;
+    opacity: 0;
+    transition: all .5s;
+    width: 100%;
+  }
+  #main-nav ul li {
+    opacity: 0;
+    transition: all .5s;
+  }
+  #main-nav label {
+    display: block;
+    margin: 12px 20px 0px 0px;
+    float: right;
+    width: 50px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+  }
+  #main-nav label span {
+    display: block;
+    background: #ECF0F1;
+    height: 5px;
+    width: 50px;
+    position: absolute;
+    transition: all .5s;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px 0px rgba(70, 70, 70, 1);
+  }
+  #main-nav label:hover span {
+    background: #fff;
+  }
+  #main-nav label span:first-child {
+    top: 0px;
+  }
+  #main-nav label span:nth-child(2) {
+    top: 15px;
+  }
+  #main-nav label span:nth-child(3) {
+    top: 30px;
+  }
+  #nav-drop:checked + label span:first-child {
+    top: 40px;
+    height: 8px;
+    z-index: 7;
+    border-radius: 0px 0px 50% 50%;
+    background: #A6C3DD;
+    width: 50px;
+  }
+  #nav-drop:checked + label span:nth-child(2) {
+    width: 50px;
+    transform: rotate(45deg);
+    background: #A6C3DD;
+    left: 2px;
+    border-radius: 0px;
+  }
+  #nav-drop:checked + label span:nth-child(3) {
+    transform: rotate(-45deg);
+    width: 50px;
+    top: 15px;
+    background: #A6C3DD;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  #nav-drop:checked ~ ul {
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    right: 0px;
+    opacity: 1;
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.46);
+    background: black;
+  }
+  #nav-drop:checked ~ ul li {
+    opacity: 1;
+    transition: all .5s;
+  }
+}
+/*==========================*/
 /*@media is for media queries below media queries change things when the screen is below a certain size*/
 @media (max-width: 1200px){
 	.fullscreen-bg {
